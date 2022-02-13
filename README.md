@@ -5,7 +5,7 @@ Trong dự án này, thuật toán ID3 đã được sửa đổi để thực h
 
 ## Dataset
 -------
-[Tập dữ liệu về hoa Iris] (https://archive.ics.uci.edu/ml/datasets/iris) bao gồm 50 mẫu từ mỗi loài trong số ba loài Iris (Iris Setosa, Iris virginica và Iris versicolor).
+[Tập dữ liệu về hoa Iris](https://archive.ics.uci.edu/ml/datasets/iris) bao gồm 50 mẫu từ mỗi loài trong số ba loài Iris (Iris Setosa, Iris virginica và Iris versicolor).
 Mỗi bản ghi liệt kê sepal_length, sepal_width, wing_length, Pet_width và loài.
 
 | sepal_length | sepal_width | wing_length | wing_width | loài |
