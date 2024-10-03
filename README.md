@@ -1,28 +1,49 @@
-## ID3 Triển khai tập dữ liệu về hoa Iris
+# ID3 Algorithm Implementation for Iris Dataset
 
-ID3 là một thuật toán được Ross Quinlan phát minh vào năm 1986 để xây dựng cây quyết định dựa trên tiêu chí thu thập thông tin và không cắt tỉa.
-Trong dự án này, thuật toán ID3 đã được sửa đổi để thực hiện tách nhị phân và áp dụng cho tập dữ liệu hoa Iris.
+## Overview
+This project implements a modified version of the ID3 (Iterative Dichotomiser 3) algorithm, originally invented by Ross Quinlan in 1986. The algorithm has been adapted to perform binary splits and is applied to the Iris flower dataset.
 
 ## Dataset
--------
-[Tập dữ liệu về hoa Iris](https://archive.ics.uci.edu/ml/datasets/iris) bao gồm 50 mẫu từ mỗi loài trong số ba loài Iris (Iris Setosa, Iris virginica và Iris versicolor).
-Mỗi bản ghi liệt kê sepal_length, sepal_width, wing_length, Pet_width và loài.
+The [Iris flower dataset](https://archive.ics.uci.edu/ml/datasets/iris) contains 50 samples from each of three species of Iris (Iris Setosa, Iris virginica, and Iris versicolor). Each record includes the following attributes:
 
-| sepal_length | sepal_width | wing_length | wing_width | loài |
-| ------------ | ----------- | ------------ | ----------- | ----------- |
-| 5,1 | 3,5 | 1,4 | 0,2 | Iris-setosa |
-| 4,9 | 3 | 1,4 | 0,2 | Iris-setosa |
-| 4,7 | 3,2 | 1,3 | 0,2 | Iris-setosa |
-| 4,6 | 3,1 | 1,5 | 0,2 | Iris-setosa |
-| ... | ... | ... | ... | ... |
+- Sepal length
+- Sepal width
+- Petal length
+- Petal width
+- Species
 
-## Tạo cây quyết định
-------------------------
+Example:
 
-Thuật toán ID3 bắt đầu với một nút duy nhất và dần dần thực hiện tách nhị phân để thu được thông tin là tối đa.
-Sự phát triển dừng lại trong quá trình thực hiện này, nếu tất cả các bản ghi trên một lá thuộc cùng một loài Iris, nếu độ sâu cây tối đa đạt được hoặc nếu số lượng mẫu trong một lá giảm xuống dưới ngưỡng.
-Xem nhận xét về mã Python để có giải thích chi tiết hơn về cách cây quyết định được xây dựng.
+| Sepal Length | Sepal Width | Petal Length | Petal Width | Species |
+|--------------|-------------|--------------|-------------|---------|
+| 5.1          | 3.5         | 1.4          | 0.2         | Iris-setosa |
+| 4.9          | 3.0         | 1.4          | 0.2         | Iris-setosa |
+| 4.7          | 3.2         | 1.3          | 0.2         | Iris-setosa |
+| 4.6          | 3.1         | 1.5          | 0.2         | Iris-setosa |
+| ...          | ...         | ...          | ...         | ... |
 
-Đầu ra
-------
-Chương trình xuất ra cây nhị phân đã tạo và tính toán độ chính xác của nó trên tập kiểm tra. Vì các tập huấn luyện và thử nghiệm được chọn ngẫu nhiên, cấu trúc của cây có thể khác nhau đối với nhiều lần thực thi chương trình.
+## Decision Tree Generation
+
+The modified ID3 algorithm starts with a single node and progressively performs binary splits to maximize information gain. The tree growth stops when:
+
+1. All records in a leaf belong to the same Iris species
+2. The maximum tree depth is reached
+3. The number of samples in a leaf falls below a threshold
+
+For a more detailed explanation of the decision tree construction, please refer to the comments in the Python code.
+
+## Output
+
+The program outputs the generated binary decision tree and calculates its accuracy on the test set. Note that the tree structure may vary between program executions due to random selection of training and test sets.
+
+## Usage
+
+[Add instructions on how to run the program, any dependencies required, and how to interpret the results.]
+
+## Contributing
+
+[Add information about how others can contribute to this project, if applicable.]
+
+## License
+
+[Specify the license under which this project is released, if applicable.]
